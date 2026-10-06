@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prácticas de JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fuente Google Inter para mejor tipografía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1>🚀 JS Playground</h1>
+            <p>Espacio de entrenamiento y práctica de JavaScript</p>
+        </div>
+    </header>
+
+    <main class="container content">
+        <section class="card">
+            <h2>Consola / Resultados</h2>
+            <p>Abre la consola del navegador (<kbd>F12</kbd> o <kbd>Ctrl + Shift + I</kbd>) para ver las salidas de tus scripts o interactúa con los elementos si estás manipulando el DOM.</p>
+            
+            <div class="status-badge">
+                <span class="dot"></span> Scripts Vinculados Correctamente
+            </div>
+        </section>
+
+        <section class="card demo-section">
+            <h3>Área de Prueba para el DOM</h3>
+            <p class="description">Puedes usar estos elementos de prueba si necesitas seleccionar nodos, escuchar eventos o modificar estilos con tus scripts.</p>
+
+            <div class="interactive-area">
+                <button id="btn-demo" class="btn btn-primary">Hacer Clic Aquí</button>
+                <div id="resultado" class="result-box">
+                    Esperando interacción...
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Prácticas de JavaScript &bull; Listo para código</p>
+    </footer>
+
+    <!-- Tus scripts de JavaScript -->
+    <script type="module" src="js/02-app.js"></script>
+    <script type="module" src="js/03-app.js"></script>
+</body>
+</html>
