@@ -18,6 +18,16 @@ function mostrarError(mensaje) {
   setTimeout(() => limpiar(), 2000);
 }
 
+function borrarUno() {
+  if (numeroActual.length > 1) {
+    numeroActual = numeroActual.slice(0, -1);
+  } else {
+    numeroActual = "0";
+  }
+
+  displayActual.textContent = numeroActual;
+}
+
 function limpiar() {
   numeroActual = "0";
   numeroAnterior = "";
@@ -121,14 +131,30 @@ botonesNumero.forEach((boton) => {
 
 botonLimpiar.addEventListener("click", limpiar);
 
-borrar.addEventListener("click", () => {
-  if (numeroActual.length > 1) {
-    numeroActual = numeroActual.slice(0, -1);
-  } else {
-    numeroActual = "0";
-  }
-
-  displayActual.textContent = numeroActual;
-});
+borrar.addEventListener("click", borrarUno);
 
 botonIgual.addEventListener("click", calcular);
+
+document.addEventListener('keydown', (evento) => {
+  const tecla = evento.key;
+
+  if ('0123456789'.includes(tecla)) {
+    agregarNumero(tecla);
+  } else if(tecla === '+') {
+    seleccionarOperador('+');
+  } else if(tecla === '-') {
+    seleccionarOperador('-');
+  } else if(tecla === '*') {
+    seleccionarOperador('×')
+  } else if(tecla === '/') {
+    seleccionarOperador('÷')
+  }
+
+  else if(tecla === 'Enter') {
+    calcular();
+  } else if(tecla === 'Escape') {
+    limpiar();
+  } else if(tecla === 'Backspace') {
+    borrarUno();
+  }
+})
