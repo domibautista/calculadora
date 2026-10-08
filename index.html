@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prácticas de JavaScript</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Fuente Google Inter para mejor tipografía -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Interactiva</title>
+  <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
+  <div class="calculadora">
+    <!-- Display -->
+    <div class="display">
+      <div class="operacion-anterior" id="operacion-anterior"></div>
+      <div class="operacion-actual" id="operacion-actual">0</div>
+    </div>
 
-    <header class="header">
-        <div class="container">
-            <h1>🚀 JS Playground</h1>
-            <p>Espacio de entrenamiento y práctica de JavaScript</p>
-        </div>
-    </header>
+    <!-- Botones -->
+    <div class="botones">
+      <button class="btn btn-funcion" id="clear">C</button>
+      <button class="btn btn-funcion" id="delete">⌫</button>
+      <button class="btn btn-operador" data-operador="÷">÷</button>
+      <button class="btn btn-operador" data-operador="×">×</button>
 
-    <main class="container content">
-        <section class="card">
-            <h2>Consola / Resultados</h2>
-            <p>Abre la consola del navegador (<kbd>F12</kbd> o <kbd>Ctrl + Shift + I</kbd>) para ver las salidas de tus scripts o interactúa con los elementos si estás manipulando el DOM.</p>
-            
-            <div class="status-badge">
-                <span class="dot"></span> Scripts Vinculados Correctamente
-            </div>
-        </section>
+      <button class="btn btn-numero" data-numero="7">7</button>
+      <button class="btn btn-numero" data-numero="8">8</button>
+      <button class="btn btn-numero" data-numero="9">9</button>
+      <button class="btn btn-operador" data-operador="-">-</button>
 
-        <section class="card demo-section">
-            <h3>Área de Prueba para el DOM</h3>
-            <p class="description">Puedes usar estos elementos de prueba si necesitas seleccionar nodos, escuchar eventos o modificar estilos con tus scripts.</p>
+      <button class="btn btn-numero" data-numero="4">4</button>
+      <button class="btn btn-numero" data-numero="5">5</button>
+      <button class="btn btn-numero" data-numero="6">6</button>
+      <button class="btn btn-operador" data-operador="+">+</button>
 
-            <div class="interactive-area">
-                <button id="btn-demo" class="btn btn-primary">Hacer Clic Aquí</button>
-                <div id="resultado" class="result-box">
-                    Esperando interacción...
-                </div>
-            </div>
-        </section>
-    </main>
+      <button class="btn btn-numero" data-numero="1">1</button>
+      <button class="btn btn-numero" data-numero="2">2</button>
+      <button class="btn btn-numero" data-numero="3">3</button>
+      <button class="btn btn-igual" id="igual" rowspan="2">=</button>
 
-    <footer class="footer">
-        <p>Prácticas de JavaScript &bull; Listo para código</p>
-    </footer>
+      <button class="btn btn-numero btn-cero" data-numero="0">0</button>
+      <button class="btn btn-numero" data-numero=".">.</button>
+    </div>
+  </div>
 
-    <!-- Tus scripts de JavaScript -->
-    <script type="module" src="js/02-app.js"></script>
-    <script type="module" src="js/03-app.js"></script>
+  <script src="calculadora.js"></script>
 </body>
 </html>
